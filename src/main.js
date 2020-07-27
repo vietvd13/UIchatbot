@@ -1,19 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { BootstrapVue} from 'bootstrap-vue'
+import { BootstrapVue } from 'bootstrap-vue'
 import Vuex from 'vuex'
 import router from './router'
 
 import './assets/css/icofont.min.css'
-
-
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-Vue.use(BootstrapVue)
+import './assets/css/style.css'
 
 Vue.use(Vuex)
-
+Vue.use(BootstrapVue)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
 

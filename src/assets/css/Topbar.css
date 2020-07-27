@@ -1,0 +1,20 @@
+.navbar{
+    background-color: #fff;
+    border-bottom: 1px solid #dee4ec;
+    box-shadow: 5px 7px 26px -5px #cdd4e7;
+}
+
+.navbar .nav-link{
+    color: #5b6e88 !important;
+}
+
+.navbar a i{
+    color: #5b6e88;
+    font-size: 20px;
+}
+
+@media(max-width: 768px){
+    .navbar-dark .navbar-toggler {
+        border-color:transparent;
+    }
+}
