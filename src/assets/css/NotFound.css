@@ -1,0 +1,140 @@
+/* ===================================== Import Variables ================================== */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Arimo:300,400,400italic,700,700italic);
+/* ===================================== Basic CSS ==================================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #3751fe;
+  font-weight: 600;}
+
+a:hover {
+  color: #3751fe;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-left: 0; }
+
+a:hover,
+a:focus,
+input,
+textarea {
+  text-decoration: none;
+  outline: none; 
+}
+
+.center {
+  text-align: center; 
+}
+
+.left {
+  text-align: left; 
+}
+
+.right {
+  text-align: right; 
+}
+
+.cp {
+  cursor: pointer; 
+}
+
+html, body {
+  height: 100%; 
+}
+
+p {
+  margin-bottom: 0px;
+  width: 100%; 
+}
+
+.no-padding {
+  padding: 0px; 
+}
+
+.no-margin {
+  margin: 0px; 
+}
+
+.hid {
+  display: none; 
+}
+
+.top-mar {
+  margin-top: 15px; 
+}
+
+.h-100 {
+  height: 100%; 
+}
+
+::placeholder {
+  color: #747f8a !important;
+  font-size: 13px;
+  opacity: .5 !important; 
+}
+
+.container-fluid {
+  padding: 0px;
+  position: absolute;
+  top: 150px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #545454; 
+}
+
+.card{
+    width: 900px;
+    height: 550px;
+    background-color: white;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img404 > img {
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title h3 {
+    font-size: 55px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.btn button{
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #6078ea;
+    margin-top: 50px;
+    color: white;
+    font-weight: 600;
+}
+
+.btn button:hover {
+    background-color: #7d90ff;
+}
+
+.btn button:focus{
+    outline: none;
+}
