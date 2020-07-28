@@ -12,9 +12,6 @@
             <div class="container-fluid dashboard">
                 <router-view></router-view>
             </div>
-            <!-- /#page-footer -->
-            <Footer/>
-            <!-- /#page-footer -->
         </div>
         <!-- /#page-content-wrapper -->
 
@@ -25,14 +22,12 @@
 
 import Topbar from '../components/Topbar';
 import Sidebar from '../components/Sidebar';
-import Footer from '../components/Footer';
 
 export default {
     name: 'home',
     components:{
         Topbar,
         Sidebar,
-        Footer,
     },
     beforeCreate: function() {
       document.body.className = 'dashboard'

@@ -22,9 +22,9 @@ body{
 }
 
 @media(max-width: 768px){
-    .dashboard {
+    /* .dashboard {
         padding: 20px !important;
-    }
+    } */
     .card {
         margin-bottom: 15px;
     }

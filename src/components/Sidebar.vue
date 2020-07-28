@@ -4,53 +4,32 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-avatar">
                     <div class="avatar">
+                        <img src="../assets/avatar.png" alt="">
                     </div>
                     <h3 class="avatar-name">
-                        Rômulo Rodrigues
+                        Teacher Admin
                     </h3>
                 </li>
                 <li>
-                    <router-link to='/dashboard'><i class="icofont-dashboard-web"></i> Lorem ipsum</router-link>
-                </li>
-                <li>
-                    <a href="#" v-on:click.prevent v-b-toggle.collapse-1><i class="icofont-users-alt-2"></i> Lorem ipsum <span class="caret float-right"><i class="icofont-caret-down"></i></span></a>
+                    <a href="#" v-on:click.prevent v-b-toggle.collapse-1><i class="icofont-dashboard-web"></i> Dashboard<span class="caret float-right"><i class="icofont-caret-down"></i></span></a>
                     <b-collapse id="collapse-1">
                         <ul id="collapse-1">
-                            <li><router-link to=''>Lorem ipsum</router-link></li>
-                            <li><router-link to=''>Lorem ipsumo</router-link></li>
+                            <li><router-link to='/dashboard/overall'>Overall</router-link></li>
+                            <li><router-link to='/dashboard/individual'>Individual</router-link></li>
                         </ul>
                     </b-collapse>
                 </li>
                 <li>
-                    <a href="#" v-on:click.prevent v-b-toggle.collapse-2><i class="icofont-ui-file"></i> Lorem ipsums <span class="caret float-right"><i class="icofont-caret-down"></i></span></a>
-                    <b-collapse id="collapse-2">
-                        <ul id="collapse-2">
-                            <li><router-link to=''>Lorem ipsum</router-link></li>
-                            <li><router-link to=''>Lorem ipsum</router-link></li>
-                        </ul>
-                    </b-collapse>
-                </li>            
-                <li>
-                    <a href="#" v-on:click.prevent v-b-toggle.collapse-3><i class="icofont-users-alt-2"></i> Lorem ipsum <span class="caret float-right"><i class="icofont-caret-down"></i></span></a>
-                    <b-collapse id="collapse-3">
-                        <ul id="collapse-3">
-                            <li><router-link to=''>Lorem ipsum</router-link></li>
-                            <li><router-link to=''>Lorem ipsum</router-link></li>
-                            <li><router-link to=''>Lorem ipsum</router-link></li>
-                        </ul>
-                    </b-collapse>
+                    <router-link to='/dashboard/qna-maker'><i class="icofont-plus-circle"></i> QnA Maker</router-link>
                 </li>
                 <li>
-                    <a href="#" v-on:click.prevent v-b-toggle.collapse-4><i class="icofont-user-suited"></i> Lorem ipsum <span class="caret float-right"><i class="icofont-caret-down"></i></span></a>
-                    <b-collapse id="collapse-4">
-                        <ul id="collapse-4">
-                            <li><router-link to=''>Lorem ipsum</router-link></li>
-                            <li><router-link to=''>Lorem ipsum</router-link></li>
-                        </ul>
-                    </b-collapse>
+                    <router-link to='/dashboard/questions-list'><i class="icofont-notepad"></i> Questions List</router-link>
                 </li>
                 <li>
-                    <a href="#"><i class="icofont-logout"></i> Lorem ipsum</a>
+                    <router-link to='/dashboard/quizzes'><i class="icofont-question"></i> Quizzes</router-link>
+                </li>
+                <li>
+                    <router-link to='/dashboard/setting'><i class="icofont-settings-alt"></i> Setting</router-link>
                 </li>
             </ul>
         </div>
