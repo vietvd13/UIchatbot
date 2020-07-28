@@ -1,4 +1,4 @@
-# ui
+# UIchatbot
 
 ## Project setup
 ```
