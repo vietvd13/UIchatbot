@@ -8,10 +8,8 @@
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         
         <b-collapse id="nav-collapse" is-nav class="d-none d-lg-block">
-            <b-navbar-nav>
-                <b-nav-item href="#">
-
-                </b-nav-item>
+            <b-navbar-nav id="text-educhat">
+                EduChat - English
             </b-navbar-nav>
 
             <!-- Right aligned nav items -->
@@ -31,7 +29,8 @@
 
 <script>
 export default {
-    name: 'Topbar'
+    name: 'Topbar',
+
 }
 </script>
 

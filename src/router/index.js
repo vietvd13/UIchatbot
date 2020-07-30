@@ -17,6 +17,7 @@ const routes = [
     {
         path: '/',
         alias: '/dashboard',
+        redirect: '/dashboard/qna-maker',
         name: 'Dashboard',
         component: Dashboard,
         meta: {
@@ -72,6 +73,10 @@ const routes = [
                 }
             }
         ]
+    },
+    {
+        path: '/dashboard',
+        redirect: '/dashboard/qna-maker',
     },
     {
         path: '/login',
