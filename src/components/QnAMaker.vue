@@ -144,6 +144,39 @@
               </div>
             </div>
 
+            <div class="bot-send">
+              <div class="row">
+                <div class="col-3 ava">
+                  <img src="../assets/bot.png" alt="Avatar">
+                </div>
+                <div class="col-8 text">
+                  <p>Me too</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="people-send">
+              <div class="row">
+                <div class="col-8 people-text">
+                  <p>Aliquip culpa culpa ex ut veniam id ex sit id dolor ullamco deserunt est.</p>
+                </div>
+                <div class="col-3 ava-people">
+                  <img src="../assets/avatar.png" alt="Avatar">
+                </div>
+              </div>
+            </div>
+
+            <div class="bot-send">
+              <div class="row">
+                <div class="col-3 ava">
+                  <img src="../assets/bot.png" alt="Avatar">
+                </div>
+                <div class="col-8 text">
+                  <p>Est duis commodo sunt enim minim cillum.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div id="send" class="row">
               <b-form-input v-model="textSend" id="textSend" class="col-10"></b-form-input>
