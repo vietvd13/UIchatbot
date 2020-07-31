@@ -1,0 +1,122 @@
+*:focus{
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    outline: 0;
+}
+
+.filter {
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+    height: 145px;
+
+}
+
+.search {
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+    height: 145px;
+}
+
+.question-list {
+    margin-top: 10px;
+    height: 700px;
+}
+
+.title-card h4{
+    text-indent: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.search {
+    padding: 10px;
+}
+
+.form-search {
+    display: inline-block;
+}
+
+.form-search input {
+    width: 90%;
+}
+
+.bv-example-row{
+    margin-top: 30px;
+}
+
+input#keyword-input {
+    margin-bottom: 10px;
+}
+
+.search button {
+    width: 100%;
+    background-color: tomato;
+    border: none;
+}
+
+.search button:hover {
+    background-color: #f9e41a;
+    color: black;
+}
+
+.search button:focus {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    outline: 0;
+}
+
+button.edit {
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: tomato;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button.edit i {
+    margin-right: 5px;
+}
+
+button.edit:hover {
+    background-color: #f9e41a;
+    color: black;
+}
+
+button.delete {
+    border-radius: 10px;
+    background-color: tomato;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button.delete i {
+    margin-right: 5px;
+}
+
+button.delete:hover {
+    background-color: #f9e41a;
+    color: black;
+}
+
+#qoutes {
+    padding: 22px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#qoutes i {
+    margin-left: 20px;
+}
+
+.questionList {
+    overflow-y: scroll;
+}

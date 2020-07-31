@@ -30,3 +30,84 @@ body{
         margin-bottom: 15px;
     }
 }
+
+
+/* CSS Table in Question List */
+@media(min-width: 768px){
+    /* QnA Maker */
+    .noQnA {
+        max-width: 10%;
+        min-width: 10%;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .questionQnA {
+        max-width: 90%;
+        min-width: 90%;
+    }
+
+
+    /* Question List Component */
+    .no {
+        max-width: 100px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .question {
+        max-width: 20%;
+        min-width: 20%;
+    }
+
+    .answera {
+        max-width: 20%;
+        min-width: 20%;
+    }
+
+    .answerb {
+        max-width: 20%;
+        min-width: 20%;
+    }
+
+    .answerc {
+        max-width: 20%;
+        min-width: 20%;
+    }
+    
+    .actions {
+        max-width: 15%;
+        min-width: 15%;
+        white-space: nowrap;
+    }
+}
+
+th.no {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+th.actions {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+th.noQnA {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+th.questionQnA {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+th {
+    background-color: tomato;
+    color: white;
+    font-weight: normal;
+}
+
+th:focus {
+    outline: none;
+}
