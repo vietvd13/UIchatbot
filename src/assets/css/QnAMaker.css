@@ -73,6 +73,7 @@ input#keyword-input {
 
 .my-0 textarea {
     margin-bottom: 10px;
+    overflow-y: scroll;
 }
 
 .my-1 input{

@@ -50,7 +50,6 @@
                 <b-form-textarea
                   id="question"
                   rows="5"
-                  max-rows="8"
                 ></b-form-textarea>
               </b-col>
             </b-row>
