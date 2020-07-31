@@ -385,12 +385,13 @@ body {
 button.btn.btn-primary.btn-sm {
   margin-top: 20px;
   width: 100%;
-  background-color: #6078ea;
+  background-color: tomato;
   border: none;
 }
 
 button.btn.btn-primary.btn-sm:hover {
-  background-color: #7d90ff;
+  background-color: #f9e41a;
+  color: #000;
 }
 
 a {
