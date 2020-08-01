@@ -80,6 +80,42 @@ body{
         min-width: 15%;
         white-space: nowrap;
     }
+
+    .no-quizzes {
+        max-width: 10px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .senderid-quizzes {
+        max-width: 15%;
+        min-width: 15%;
+        white-space: nowrap;
+    }
+
+    .studentid-quizzes {
+        max-width: 15%;
+        min-width: 15%;
+        white-space: nowrap;
+    }
+
+    .fullname-quizzes {
+        max-width: 15%;
+        min-width: 15%;
+        white-space: nowrap;
+    }
+
+    .class-quizzes {
+        max-width: 15%;
+        min-width: 15%;
+        white-space: nowrap;
+    }
+
+    .table-checkbox {
+        max-width: 5%;
+        min-width: 5%;
+        text-align: center;
+    }
 }
 
 th.no {
@@ -101,6 +137,13 @@ th.questionQnA {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
+th.no-quizzes {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
 
 th {
     background-color: tomato;
@@ -134,3 +177,4 @@ th:focus {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+

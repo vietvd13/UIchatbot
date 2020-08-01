@@ -1,0 +1,52 @@
+*:focus{
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    outline: 0;
+}
+
+.filter {
+    margin-top: 8px;
+}
+
+.filter-type {
+    padding: 10px;
+}
+
+.filter-fdate {
+    padding: 10px;
+}
+
+.filter-ldate {
+    padding: 10px;
+}
+
+.filter-button {
+    padding: 10px;
+}
+
+.filter-button button{
+    padding: 5px;
+    border: none;
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+}
+
+.filter-button button:hover {
+    background-color: #f9e41a;
+    color: black;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.area {
+    padding: 10px;
+}
+
+.pie {
+    padding: 10px;
+}

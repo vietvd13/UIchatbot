@@ -31,6 +31,9 @@
                 <li>
                     <router-link to='/dashboard/setting'><i class="icofont-settings-alt"></i> Setting</router-link>
                 </li>
+                 <li>
+                    <router-link to='/login'><i class="icofont-logout"></i> Logout</router-link>
+                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->

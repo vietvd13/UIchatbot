@@ -3,22 +3,8 @@
     <div class="container-fluid dashboard">
       <div class="row">
 
-          <div class="col-lg-5 col-sm">
-              <div class="card" id="search">
-                <center>
-                  <h4 id="title">Questions and Answers</h4>
-                  <b-container class="bv-example-row">
-                    <b-row>
-                      <b-col class="col-8"><b-form-input v-model="keyword" type="text" debounce="500" placeholder="Search Question" id="keyword-input"></b-form-input></b-col>
-                      <b-col class="col-4"><b-button>Search</b-button></b-col>
-                    </b-row>
-                  </b-container>
-                </center>
-              </div>
-          </div>
-          
           <div class="col-lg col-sm">
-              <div class="card" id="qoutes">
+            <div class="card" id="qoutes">
                   <div class="card-body">
                       <div class="media align-items-center">
                           <div class="media-body">
@@ -32,11 +18,25 @@
               </div>
           </div>
 
+          <div class="col-lg col-sm">
+              <div class="card" id="search">
+                <center>
+                  <h4 id="title">Questions and Answers</h4>
+                  <b-container class="bv-example-row">
+                    <b-row>
+                      <b-col class="col-8"><b-form-input v-model="keyword" type="text" debounce="500" placeholder="Search Question" id="keyword-input"></b-form-input></b-col>
+                      <b-col class="col-4"><b-button>Search</b-button></b-col>
+                    </b-row>
+                  </b-container>
+                </center>
+              </div>
+          </div>
+
       </div>
 
       <div class="row">
 
-        <div class="col-lg-5 col-sm">
+        <div class="col-lg col-sm">
           <div class="card" id="maker">
             <center>
               <h4 id="title">Maker Question and Answers</h4>
@@ -135,7 +135,7 @@
             <div class="people-send">
               <div class="row">
                 <div class="col-8 people-text">
-                  <p>I fine and you? I fine and you? I fine and you? I fine and you?</p>
+                  <p>I fine and you?</p>
                 </div>
                 <div class="col-3 ava-people">
                   <img src="../assets/avatar.png" alt="Avatar">
@@ -224,7 +224,7 @@ export default {
           { No: 8, Question: 'Officia cillum eu reprehenderit aute quis dolore mollit laboris et cillum irure cupidatat consectetur excepteur.' },
           { No: 9, Question: 'Labore laboris aute exercitation commodo sit id.' },
           { No: 10, Question: 'Ad incididunt mollit laborum officia enim veniam irure labore minim labore.' },
-          { No: 11, Question: 'Elit officia veniam elit ut esse pariatur tempor irure ut non Lorem magna.n' },
+          { No: 11, Question: 'Elit officia veniam elit ut esse pariatur tempor irure ut non Lorem magnan.' },
           { No: 12, Question: 'Voluptate nostrud sunt id nisi ad enim ea id.' },
           { No: 13, Question: 'Ut culpa cillum ullamco consequat ut dolor sunt enim.' },
           { No: 14, Question: 'Aliquip ut cupidatat deserunt aute labore pariatur culpa.' },

@@ -1,0 +1,124 @@
+*:focus{
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    outline: 0;
+}
+
+.title-card h4{
+    text-indent: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+#title-search {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.search {
+    padding: 13px;
+    margin-top: 8px;
+}
+
+.form-search {
+    display: inline-block;
+}
+
+.form-search input {
+    width: 90%;
+}
+
+.bv-example-row{
+    margin-top: 30px;
+}
+
+input#keyword-input {
+    margin-bottom: 10px;
+}
+
+.search button {
+    width: 100%;
+    background-color: tomato;
+    border: none;
+}
+
+.search button:hover {
+    background-color: #f9e41a;
+    color: black;
+}
+
+.search button:focus {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    outline: 0;
+}
+
+#qoutes {
+    padding: 22px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#qoutes i {
+    margin-left: 20px;
+}
+
+.main {
+    margin-top: 5px;
+}
+
+.col.main{
+    padding: 0;
+    margin: 0;
+}
+
+.main-height {
+    height: 705px;
+    overflow: hidden;
+}
+
+#title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#table-quizzes {
+    overflow-y: scroll;
+    height: 75%;
+}
+
+.card {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.submit {
+    overflow: hidden;
+    margin-top: 35px;
+}
+
+#btn-submit button {
+    width: 150px;
+    background-color: tomato;
+    border: none;
+    text-align: center;
+}
+
+#btn-submit button:hover {
+    background-color: #f9e41a;
+    color: black;
+}
+
+@media(max-width: 768px){
+   #btn-submit {
+       text-align: center;
+   }
+}
+
+.send {
+    margin-right: 10px;
+}
+
+

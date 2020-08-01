@@ -120,3 +120,8 @@ button.delete:hover {
 .questionList {
     overflow-y: scroll;
 }
+
+.question-list {
+    padding-left: 15px;
+    padding-right: 15px;
+}
