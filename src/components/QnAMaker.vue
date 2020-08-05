@@ -109,7 +109,14 @@
               <h4 id="title">Question List</h4>
             </center>
             <div class="question-list">
-              <b-table hover :items="items" :fields="fields" id="tableList" class="table"></b-table>
+              <b-table 
+                hover 
+                :items="items" 
+                :fields="fields" 
+                id="tableList" 
+                class="table"
+              >
+              </b-table>
             </div>
           </div>
         </div>

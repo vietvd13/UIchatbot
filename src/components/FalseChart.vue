@@ -19,7 +19,7 @@ export default {
           {
             label: "Number of Incorrect Answers",
             backgroundColor: "#f87979",
-            data: [40, 20, 12, 39, 10, 40, 39]
+            data: [10, 30, 40, 45, 40, 42, 15]
           }
         ]
       },

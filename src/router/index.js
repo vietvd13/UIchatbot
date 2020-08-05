@@ -8,6 +8,7 @@ import Overall from '../components/Overall.vue'
 import Individual from '../components/Individual.vue'
 import QnAMaker from '../components/QnAMaker.vue'
 import QuestionsList from '../components/QuestionsList.vue'
+import ExampleCode from '../components/ExampleCode.vue'
 import Quizzes from '../components/Quizzes.vue'
 import Setting from '../components/Setting.vue'
 
@@ -50,10 +51,18 @@ const routes = [
             },
             {
                 path: 'questions-list',
-                name: 'Questions List',
+                name: 'QuestionsList',
                 component: QuestionsList,
                 meta: {
                     title: 'Questions List - EduChat'
+                }
+            },
+            {
+                path: 'example-code',
+                name: 'ExampleCode',
+                component: ExampleCode,
+                meta: {
+                    title: 'ExampleCode - EduChat'
                 }
             },
             {

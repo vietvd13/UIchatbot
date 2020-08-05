@@ -23,7 +23,7 @@ export default {
         datasets: [
           {
             backgroundColor: [this.gradient, this.gradient2, "#00D8FF"],
-            data: [288, 79]
+            data: [299, 51]
           }
         ]
       },

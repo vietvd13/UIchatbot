@@ -44,7 +44,7 @@ export default {
             borderWidth: 1,
             pointBorderColor: "white",
             backgroundColor: this.gradient,
-            data: [40, 39, 10, 40, 39, 80, 40]
+            data: [45, 35, 40, 50, 39, 50, 40]
           },
           {
             label: "NOT take the quizzes entirely",
@@ -53,7 +53,7 @@ export default {
             pointBorderColor: "white",
             borderWidth: 1,
             backgroundColor: this.gradient2,
-            data: [5, 10, 30, 10, 2, 12, 10]
+            data: [5, 15, 10, 0, 11, 0, 10]
           }
         ]
       },

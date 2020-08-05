@@ -26,6 +26,9 @@
                     <router-link to='/dashboard/questions-list'><i class="icofont-notepad"></i> Questions List</router-link>
                 </li>
                 <li>
+                    <router-link to='/dashboard/example-code'><i class="icofont-notebook"></i> Example Code</router-link>
+                </li>
+                <li>
                     <router-link to='/dashboard/quizzes'><i class="icofont-question"></i> Quizzes</router-link>
                 </li>
                 <li>

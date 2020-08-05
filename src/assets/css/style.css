@@ -2,6 +2,12 @@ body{
     background-color: #EBEFF9;
 }
 
+*:focus{
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    outline: 0;
+}
+
 .card {
     margin-bottom: 12px;
     border: none;
@@ -116,6 +122,15 @@ body{
         min-width: 5%;
         text-align: center;
     }
+
+    .no-ExampleCode {
+        text-align: center;
+    }
+
+    .Actions-ExampleCode {
+        text-align: center;
+    }
+
 }
 
 th.no {
@@ -143,6 +158,15 @@ th.no-quizzes {
     border-bottom-left-radius: 5px;
 }
 
+th.no-ExampleCode {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+th.Actions-ExampleCode {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 
 
 th {
@@ -177,4 +201,5 @@ th:focus {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+
 

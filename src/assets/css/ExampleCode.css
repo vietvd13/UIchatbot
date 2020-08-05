@@ -1,0 +1,108 @@
+.row-top {
+    margin-top: 8px;
+}
+
+#qoutes {
+    padding: 10px;
+}
+
+#title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#search {
+    padding: 7.5px;
+}
+
+.form-search {
+    display: inline-block;
+}
+
+.form-search input {
+    width: 90%;
+}
+
+input#keyword-input {
+    margin-bottom: 10px;
+}
+
+#search button {
+    width: 100%;
+    background-color: tomato;
+    border: none;
+}
+
+#search button:hover {
+    background-color: #f9e41a;
+    color: black;
+}
+
+#search button:focus {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    outline: 0;
+}
+
+.people-text {
+    margin: 10px;
+}
+
+.question-list {
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.question-list td {
+    word-wrap:break-word;
+}
+
+.title {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.pickQuestion {
+    height: 720px;
+    overflow: hidden;
+}
+
+.question-list {
+    margin: 10px;
+}
+
+.pick {
+    line-height: 5px;
+}
+
+.code {
+    margin: 10px;
+}
+
+#btn-submit {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+#btn-submit button {
+    width: 200px;
+    /* background-color: #F76B1C;
+    background-image: linear-gradient(90deg, #F76B1C 0%, #FAD961 100%);     */
+    background-color: tomato;
+    border: none;
+    text-align: center;
+}
+
+#btn-submit button:hover {
+    background-color: #f9e41a;
+    color: black;
+    /* background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);  */
+}
+
+@media(max-width: 768px) {
+    #btn-submit {
+        text-align: center;
+    }
+}
