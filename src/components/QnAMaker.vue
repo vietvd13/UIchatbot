@@ -109,14 +109,22 @@
               <h4 id="title">Question List</h4>
             </center>
             <div class="question-list">
-              <b-table 
-                hover 
-                :items="items" 
-                :fields="fields" 
-                id="tableList" 
-                class="table"
-              >
-              </b-table>
+              
+              <table v-if="items.length" class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Question</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="item in resultQuery" :key="item.No">
+                    <td>{{ item.No }}</td>
+                    <td>{{ item.Question }}</td>
+                  </tr>
+                </tbody>
+              </table>
+
             </div>
           </div>
         </div>
@@ -240,6 +248,17 @@ export default {
           { No: 17, Question: 'Id occaecat fugiat est do deserunt velit exercitation dolor quis elit exercitation dolore.' },
           { No: 18, Question: 'Occaecat fugiat ad duis veniam sunt.' },
         ]
+      }
+    },
+    computed: {
+      resultQuery() {
+        if(this.keyword) {
+          return this.items.filter((item) => {
+            return this.keyword.toLowerCase().split(' ').every(v => item.Question.toLowerCase().includes(v))
+          })
+        }else {
+          return this.items
+        }
       }
     }
 }

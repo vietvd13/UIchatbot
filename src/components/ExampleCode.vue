@@ -52,7 +52,7 @@
                     <label for="code">Code</label>
                   </b-col>
                   <b-col sm="12">
-                    <b-form-input v-model="code" disabled="false" id="code"></b-form-input>
+                    <b-form-input v-model="code" :readonly="true" id="code"></b-form-input>
                   </b-col>
                 </b-row>
               </b-col>
@@ -70,7 +70,7 @@
           </div>
 
           <div class="question-list">
-            <table class="table table-hover">
+            <table v-if="items.length" class="table table-hover">
               <thead>
                 <tr>
                   <th class="pick">
@@ -86,7 +86,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="item in items" :key="item.No">
+                <tr v-for="item in resultQuery" :key="item.No">
                   <td>
                     <label>
                       <input type="checkbox" :value="item.No" v-model="selected">
@@ -124,64 +124,26 @@ export default {
         addQuestion: '',
         code: 'GCH0717',
         detailCode: '', 
-        fields: [
-          {
-            key: 'No',
-            label: 'ID',
-            sortable: true,
-            class: 'no'
-          },
-          {
-            key: 'Question',
-            label: 'Question',
-            sortable: true,
-            class: 'question'
-          },
-          {
-            key: 'AnswerA',
-            label: 'Answer A',
-            sortable: true,
-            class: 'answera'
-          },
-          {
-            key: 'AnswerB',
-            label: 'Answer B',
-            sortable: true,
-            class: 'answerb'
-          },
-          {
-            key: 'AnswerC',
-            label: 'Answer C',
-            sortable: true,
-            class: 'answerc'
-          },
-          {
-            key: 'Actions',
-            label: 'Actions',
-            sortable: false,
-            class: 'actions'
-          }
-        ],
         selectAll: false,
         selected: [],
         items: [
           { No: 1, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },
-          { No: 2, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 3, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 4, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 5, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 6, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 7, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 8, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 9, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 10, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 11, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 12, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 13, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 14, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 15, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 16, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 17, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },          
+          { No: 2, Question: 'Consequat culpa nostrud nostrud Lorem nulla enim tempor ut.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 3, Question: 'Pariatur sunt irure aliquip exercitation eiusmod reprehenderit voluptate laboris elit do cillum nisi..', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 4, Question: 'Consectetur nostrud consequat occaecat cillum nostrud dolore excepteur aliqua fugiat aliqua velit.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 5, Question: 'Deserunt nulla duis adipisicing consectetur tempor incididunt excepteur pariatur irure.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 6, Question: 'Magna mollit ad est consectetur enim aliqua ea reprehenderit esse ea sunt.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 7, Question: 'Consequat reprehenderit quis ut est enim voluptate tempor duis minim id.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 8, Question: 'Irure eu laboris do esse exercitation dolor consectetur velit velit officia amet ea in.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 9, Question: 'Enim ut ea officia in voluptate est ad dolore.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 10, Question: 'Voluptate reprehenderit aute commodo excepteur aute ullamco et velit.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 11, Question: 'Deserunt velit ex Lorem id sit est velit non ex excepteur.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 12, Question: 'Exercitation consectetur enim aliquip occaecat eu officia proident ipsum occaecat occaecat do sit.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 13, Question: 'Non consequat commodo ipsum fugiat et minim proident.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 14, Question: 'Amet fugiat laborum anim nulla dolor ea eiusmod ullamco deserunt.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 15, Question: 'Minim aliquip in nisi minim ex irure.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 16, Question: 'Sit quis sunt consequat cupidatat in do quis in consequat laboris.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
+          { No: 17, Question: 'Esse aliqua nulla fugiat sit sint.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },          
         ]
       }
     },
@@ -193,7 +155,17 @@ export default {
             this.selected.push(this.items[i].No);
           }
         }
-        console.log(this.selected)
+      }
+    },
+    computed: {
+      resultQuery() {
+        if(this.keyword) {
+          return this.items.filter((item) => {
+            return this.keyword.toLowerCase().split(' ').every(v => item.Question.toLowerCase().includes(v))
+          })
+        }else {
+          return this.items
+        }
       }
     }
 }

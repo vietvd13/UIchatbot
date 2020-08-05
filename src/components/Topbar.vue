@@ -18,8 +18,8 @@
                     <template v-slot:button-content>
                         <i class="icofont-ui-user"></i>
                     </template>
-                    <b-dropdown-item href="#"><i class="icofont-tools"></i> Settings</b-dropdown-item>
-                    <b-dropdown-item href="#"><i class="icofont-logout"></i> Logout</b-dropdown-item>
+                    <b-dropdown-item class="text"><router-link to='/dashboard/setting'><i class="icofont-settings-alt"></i> Setting</router-link></b-dropdown-item>
+                    <b-dropdown-item class="text"><router-link to='/login'><i class="icofont-logout"></i> Logout</router-link></b-dropdown-item>
                 </b-nav-item-dropdown>
             </b-navbar-nav>
         </b-collapse>

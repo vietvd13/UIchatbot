@@ -22,3 +22,8 @@
 #text-educhat {
     font-size: 19px;
 }
+
+.text a {
+    color: black;
+    text-decoration: none;
+}
