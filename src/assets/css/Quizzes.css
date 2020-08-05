@@ -117,8 +117,14 @@ input#keyword-input {
    }
 }
 
-.send {
-    margin-right: 10px;
+.pick {
+    line-height: 5px;
 }
 
+#title-code {
+    padding: 7px;
+}
 
+#title-code h4 {
+    text-align: center;
+}
