@@ -46,7 +46,7 @@
           </div>
           <div class="code">
             <b-row>
-              <b-col>
+              <!-- <b-col>
                 <b-row class="my-1">
                   <b-col sm="2">
                     <label for="code">Code</label>
@@ -55,11 +55,11 @@
                     <b-form-input v-model="code" :readonly="true" id="code"></b-form-input>
                   </b-col>
                 </b-row>
-              </b-col>
+              </b-col> -->
               <b-col>
                 <b-row class="my-1">
                   <b-col sm="2">
-                    <label for="detailCode">Detail code</label>
+                    <label for="detailCode">Name for Example Code</label>
                   </b-col>
                   <b-col sm="12">
                     <b-form-input v-model="detailCode" id="detailCode"></b-form-input>
@@ -122,7 +122,6 @@ export default {
       return {
         keyword: '',
         addQuestion: '',
-        code: 'GCH0717',
         detailCode: '', 
         selectAll: false,
         selected: [],

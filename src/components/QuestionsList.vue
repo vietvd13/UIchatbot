@@ -38,17 +38,36 @@
             <h4>Question List</h4>
           </div>
             <div class="questionList">
-              <b-table stacked="md" hover :items="items" :fields="fields">
-                <template v-slot:cell(Actions)>
-                  <b-button size="sm edit">
-                    <i class="icofont-ui-edit"></i><span> Edit</span>
-                  </b-button>
-
-                  <b-button size="sm delete">
-                    <i class="icofont-ui-delete"></i><span> Delete</span>
-                  </b-button>
-              </template>
-            </b-table>
+              <table v-if="items.length" class="table table-hover">
+                <thead>
+                  <tr>
+                    <th class="pick">
+                      <label>
+                        <input type="checkbox" v-model="selectAll" @click="select">
+                      </label>
+                    </th>
+                    <th class="QuestionID">Question ID</th>
+                    <th class="Question">Question</th>
+                    <th class="Answer">Answer A</th>
+                    <th class="Answer">Answer B</th>
+                    <th class="Answer">Answer C</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="item in resultQuery" :key="item.QuestionID">
+                    <td>
+                      <label>
+                        <input v-model="selected" :value="item.QuestionID" type="checkbox" @change="show">
+                      </label>
+                    </td>
+                    <td>{{ item.QuestionID }}</td>
+                    <td>{{ item.Question }}</td>
+                    <td>{{ item.A }}</td>
+                    <td>{{ item.B }}</td>
+                    <td>{{ item.C }}</td>
+                  </tr>
+                </tbody>
+              </table>
           </div>
         </div>
       </div>
@@ -57,63 +76,46 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     name: 'questionlist',
     data() {
       return {
         keyword: '',
-        fields: [
-          {
-            key: 'No',
-            sortable: true,
-            class: 'no'
-          },
-          {
-            key: 'Question',
-            sortable: true,
-            class: 'question'
-          },
-          {
-            key: 'AnswerA',
-            sortable: true,
-            class: 'answera'
-          },
-          {
-            key: 'AnswerB',
-            sortable: true,
-            class: 'answerb'
-          },
-          {
-            key: 'AnswerC',
-            sortable: true,
-            class: 'answerc'
-          },
-          {
-            key: 'Actions',
-            sortable: false,
-            class: 'actions'
-          }
-        ],
-        items: [
-          { No: 1, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },
-          { No: 2, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 3, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 4, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 5, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 6, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 7, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 8, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 9, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 10, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 11, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 12, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 13, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 14, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 15, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 16, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },       
-          { No: 17, Question: 'Pariatur minim sunt occaecat nulla duis.', AnswerA: 'DDolore ut adipisicing occaecat ex adipisicing laboris aute enim quis irure et minim id.', AnswerB: 'Fugiat amet in velit tempor minim consectetur.', AnswerC: 'Incididunt deserunt exercitation ad ex.' },              
-        ]
+        items: [],
+        selectAll: false,
+        selected: [],
       }
+    },
+    methods: {
+      select() {
+        this.selected = [];
+        if (!this.selectAll) {
+          for (let i in this.items) {
+            this.selected.push(this.items[i].QuestionID);
+          }
+        }
+        console.log(this.selected)
+      },
+
+      show() {
+        console.log(this.selected)
+      }
+    },
+    computed: {
+      resultQuery() {
+        if(this.keyword) {
+          return this.items.filter((item) => {
+            return this.keyword.toLowerCase().split(' ').every(v => item.Question.toLowerCase().includes(v))
+          })
+        }else {
+          return this.items
+        }
+      }
+    },
+    mounted() {
+      axios.get(`http://3104e08ae08b.ngrok.io/getAllQuestionList`)
+      .then(response => {this.items = response.data})
     }
 }
 </script>

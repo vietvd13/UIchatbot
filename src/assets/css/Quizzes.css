@@ -119,6 +119,12 @@ input#keyword-input {
 
 .pick {
     line-height: 5px;
+    width: auto;
+    min-width: 10px;
+    max-width: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #title-code {
@@ -126,5 +132,22 @@ input#keyword-input {
 }
 
 #title-code h4 {
+    text-align: center;
+}
+
+.colData {
+    width: auto;
+    min-width: 200px;
+    max-width: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th {
+    text-align: center;
+}
+
+td {
     text-align: center;
 }
