@@ -41,6 +41,7 @@
               <table v-if="items.length" class="table table-hover">
                 <thead>
                   <tr>
+                    <th>#</th>
                     <th class="pick">
                       <label>
                         <input type="checkbox" v-model="selectAll" @click="select">
@@ -55,7 +56,8 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="item in resultQuery" :key="item.QuestionID">
+                  <tr v-for="(item, index) in resultQuery" :key="index">
+                    <td>{{index + 1}}</td>
                     <td>
                       <label>
                         <input v-model="selected" :value="item.QuestionID" type="checkbox" @change="show">

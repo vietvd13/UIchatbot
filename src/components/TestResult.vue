@@ -33,6 +33,7 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
+                                <th>#</th>
                                 <th>Fullname</th>
                                 <th>Student ID</th>
                                 <th>Grade</th>
@@ -41,7 +42,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="item in items" :key="item.sender_id">
+                            <tr v-for="(item, index) in items" :key="index">
+                                <td>{{index + 1}}</td>
                                 <td>{{item.sender_name}}</td>
                                 <td>{{item.studentID}}</td>
                                 <td>{{item.totalResult}}/{{item.totalQuestion}}</td>
