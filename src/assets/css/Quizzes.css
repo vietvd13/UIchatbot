@@ -81,12 +81,11 @@ input#keyword-input {
 #title {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 15px;
 }
 
 #table-quizzes {
     overflow-y: scroll;
-    height: 75%;
+    height: 65%;
 }
 
 .card {
@@ -150,4 +149,8 @@ th {
 
 td {
     text-align: center;
+}
+
+.time {
+    margin-bottom: 10px;
 }

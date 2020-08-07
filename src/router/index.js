@@ -10,6 +10,7 @@ import QnAMaker from '../components/QnAMaker.vue'
 import QuestionsList from '../components/QuestionsList.vue'
 import ExampleCode from '../components/ExampleCode.vue'
 import Quizzes from '../components/Quizzes.vue'
+import TestResult from '../components/TestResult.vue'
 import Setting from '../components/Setting.vue'
 
 Vue.use(VueRouter)
@@ -72,6 +73,15 @@ const routes = [
                 meta: {
                     title: 'Quizzes - EduChat'
                 }
+            },
+            {
+                path: 'test-result',
+                name: 'TestResult',
+                component: TestResult,
+                meta: {
+                    title: 'Test Result - EduChat'
+                }
+                
             },
             {
                 path: 'setting',

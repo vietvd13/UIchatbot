@@ -38,6 +38,20 @@
           <div id="title">
             <h4>Quizzes</h4>
           </div>
+          <div class="time">
+            <b-row>
+              <b-col>
+                <b-row class="my-1">
+                  <b-col sm="2">
+                    <label for="time">Time Test</label>
+                  </b-col>
+                  <b-col sm="12">
+                    <b-form-input type="number" v-model="timeTest" id="time" min=1></b-form-input>
+                  </b-col>
+                </b-row>
+              </b-col>
+            </b-row>
+          </div>
           <div id="table-quizzes">
             <table v-if="items.length" class="table table-hover">
               <thead>
@@ -96,6 +110,7 @@ export default {
         optionSelected: 0,
         options: [],
         items: [],
+        timeTest: null,
       }
     },
     methods: {
@@ -106,22 +121,27 @@ export default {
             this.selected.push(this.items[i].sender_id);
           }
         }
-        // console.log(this.selected)
+        console.log(this.selected)
       },
 
-      // show() {
-      //   console.log(this.selected)
-      // }
+      show() {
+        console.log(this.selected)
+      },
 
       sendTest() {
+        let optionMaDe = this.optionSelected.toString();
+
         const dataSend = {
           sender_id: this.selected,
-          MaDe: this.optionSelected
+          MaDe: optionMaDe,
+          ThoiGian: this.timeTest
         }
 
-        axios.post(`http://3104e08ae08b.ngrok.io/SendFistQuestion`, {
+        if(this.timeTest > 0 && this.timeTest != null) {
+          axios.post(`http://cedf32badbb0.ngrok.io/SendFistQuestion`, {
           dataSend
         })
+        } 
       }
     },
     computed: {
@@ -136,10 +156,10 @@ export default {
       }
     },
     mounted() {
-      axios.get(`http://3104e08ae08b.ngrok.io/getStudentList`)
+      axios.get(`http://cedf32badbb0.ngrok.io/getStudentList`)
       .then(response => { this.items = response.data })
 
-      axios.get(`http://3104e08ae08b.ngrok.io/getDeThi`)
+      axios.get(`http://cedf32badbb0.ngrok.io/getDeThi`)
       .then(response => { this.options = response.data })
     }      
 }

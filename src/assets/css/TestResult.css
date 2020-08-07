@@ -1,0 +1,69 @@
+*:focus{
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    outline: 0;
+}
+
+.filter {
+    margin-top: 8px;
+}
+
+.filter-type {
+    padding: 10px;
+}
+
+.filter-button {
+    padding: 10px;
+}
+
+.filter-button button{
+    padding: 5px;
+    border: none;
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+}
+
+.filter-button button:hover {
+    background-color: #f9e41a;
+    color: black;
+}
+
+.table-testResult {
+    margin: 10px;
+}
+
+.table-testResult {
+    text-align: center;
+}
+
+.btnDetail button {
+    border: none;
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+}
+
+.btnDetail button:hover {
+    background-color: #f9e41a;
+    color: black;
+}
+
+.table-testResult {
+    overflow: scroll;
+}
+
+.table-card {
+    height: 790px;
+}
+
+.table-testResult {
+    height: 750px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+

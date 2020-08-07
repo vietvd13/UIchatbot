@@ -118,8 +118,8 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="item in resultQuery" :key="item.No">
-                    <td>{{ item.No }}</td>
+                  <tr v-for="(item, index) in resultQuery" :key="item.Question">
+                    <td>{{ index + 1 }}</td>
                     <td>{{ item.Question }}</td>
                   </tr>
                 </tbody>
@@ -205,6 +205,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     name: 'QnAMaker',
     data() {
@@ -216,38 +217,7 @@ export default {
         box: false,
         textSend: '',
         selected: 'A',
-        fields: [
-          {
-            key: 'No',
-            sortable: true,
-            class: 'noQnA'
-          },
-          {
-            key: 'Question',
-            sortable: true,
-            class: 'questionQnA'
-          },
-        ],
-        items: [
-          { No: 1, Question: 'Magna reprehenderit minim non quis dolore commodo commodo est commodo occaecat.' },
-          { No: 2, Question: 'Irure excepteur id eu sint enim eu ipsum sunt veniam reprehenderit in irure exercitation fugiat.' },
-          { No: 3, Question: 'Non officia culpa eiusmod non esse laboris aute eiusmod excepteur eiusmod velit.' },
-          { No: 4, Question: 'Laborum pariatur laboris culpa ullamco in non labore pariatur id dolore id duis.' },
-          { No: 5, Question: 'Incididunt incididunt occaecat anim incididunt Lorem et laboris officia cillum minim quis ipsum.' },
-          { No: 6, Question: 'Voluptate aliquip aliquip incididunt ad ipsum labore ipsum.' },
-          { No: 7, Question: 'Minim ut id eiusmod tempor consequat.' },
-          { No: 8, Question: 'Officia cillum eu reprehenderit aute quis dolore mollit laboris et cillum irure cupidatat consectetur excepteur.' },
-          { No: 9, Question: 'Labore laboris aute exercitation commodo sit id.' },
-          { No: 10, Question: 'Ad incididunt mollit laborum officia enim veniam irure labore minim labore.' },
-          { No: 11, Question: 'Elit officia veniam elit ut esse pariatur tempor irure ut non Lorem magnan.' },
-          { No: 12, Question: 'Voluptate nostrud sunt id nisi ad enim ea id.' },
-          { No: 13, Question: 'Ut culpa cillum ullamco consequat ut dolor sunt enim.' },
-          { No: 14, Question: 'Aliquip ut cupidatat deserunt aute labore pariatur culpa.' },
-          { No: 15, Question: 'Ullamco culpa eiusmod anim veniam adipisicing et quis.' },
-          { No: 16, Question: 'Officia duis ipsum minim incididunt occaecat labore officia excepteur laborum qui ullamco occaecat anim.' },
-          { No: 17, Question: 'Id occaecat fugiat est do deserunt velit exercitation dolor quis elit exercitation dolore.' },
-          { No: 18, Question: 'Occaecat fugiat ad duis veniam sunt.' },
-        ]
+        items: []
       }
     },
     computed: {
@@ -260,6 +230,10 @@ export default {
           return this.items
         }
       }
+    },
+    mounted() {
+      axios.get(`http://cedf32badbb0.ngrok.io/getAllQuestionList`)
+      .then(response => { this.items = response.data })
     }
 }
 </script>

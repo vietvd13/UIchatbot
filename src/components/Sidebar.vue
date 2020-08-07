@@ -32,6 +32,9 @@
                     <router-link to='/dashboard/quizzes'><i class="icofont-question"></i> Quizzes</router-link>
                 </li>
                 <li>
+                    <router-link to='/dashboard/test-result'><i class="icofont-ui-edit"></i> Test Result</router-link>
+                </li>
+                <li>
                     <router-link to='/dashboard/setting'><i class="icofont-settings-alt"></i> Setting</router-link>
                 </li>
                  <li>

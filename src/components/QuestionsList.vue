@@ -51,6 +51,7 @@
                     <th class="Answer">Answer A</th>
                     <th class="Answer">Answer B</th>
                     <th class="Answer">Answer C</th>
+                    <th class="Answer">Answer</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -65,6 +66,7 @@
                     <td>{{ item.A }}</td>
                     <td>{{ item.B }}</td>
                     <td>{{ item.C }}</td>
+                    <td>{{ item.Answer }}</td>
                   </tr>
                 </tbody>
               </table>
@@ -114,8 +116,8 @@ export default {
       }
     },
     mounted() {
-      axios.get(`http://3104e08ae08b.ngrok.io/getAllQuestionList`)
-      .then(response => {this.items = response.data})
+      axios.get(`http://cedf32badbb0.ngrok.io/getAllQuestionList`)
+      .then(response => { this.items = response.data })
     }
 }
 </script>
